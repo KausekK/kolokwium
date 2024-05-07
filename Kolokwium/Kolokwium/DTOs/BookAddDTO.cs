@@ -2,7 +2,7 @@
 
 public class BookAddDTO
 {
-    public int id { get; set; }
+   
     public string title { get; set; }
     public List<GenreDTO> genres { get; set; }
 

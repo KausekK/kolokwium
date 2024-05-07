@@ -65,9 +65,7 @@ public class BookService
                     command.CommandText = "INSERT INTO books (title) VALUES (@title); SELECT SCOPE_IDENTITY();";
                     command.Parameters.AddWithValue("@title", bookDto.title);
                     bookId = Convert.ToInt32(command.ExecuteScalar());
-            
-                   
-                       
+                    
                             command.Parameters.Clear();
                             command.CommandText = "INSERT INTO books_genres (FK_book, FK_genre) VALUES (@book, @genre)";
                             command.Parameters.AddWithValue("@book", bookId);
